@@ -7,8 +7,19 @@
 
 module.exports = {
 
-	create: function(req, res, next) {
+  edit: function(req, res, next) {
+		User.findOne(req.param('id'), function foundUser(err, user) {
+			if(err) return next(err);
+			if(!user) return next();
+			// if successful, display the user profile page (show.ejs), passing in user data
+			res.view({
+				user: user
+			});
+		});
+	},
 
+	create: function(req, res, next) {
+    var params = req.params.all();
 		// create user with params
 		User.create(params, function userCreated(err, user) {
 			// if error, redirect user back to create user page and log error
@@ -41,6 +52,5 @@ module.exports = {
 			});
 		});
 	},
-	
-};
 
+};

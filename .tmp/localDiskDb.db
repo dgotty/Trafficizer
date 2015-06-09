@@ -1,6 +1,27 @@
 {
   "data": {
-    "user": []
+    "user": [
+      {
+        "username": "dgotty",
+        "email": "dgotty28@gmail.com",
+        "firstname": "Richard",
+        "lastname": "Gottlieb",
+        "homeaddress": "128 Woodbridge Ct S",
+        "id": 1,
+        "createdAt": "2015-06-09T21:56:20.068Z",
+        "updatedAt": "2015-06-09T21:56:20.068Z"
+      },
+      {
+        "username": "test",
+        "email": "test",
+        "firstname": "Ed",
+        "lastname": "Davis",
+        "homeaddress": "test",
+        "id": 2,
+        "createdAt": "2015-06-09T21:59:51.176Z",
+        "updatedAt": "2015-06-09T21:59:51.176Z"
+      }
+    ]
   },
   "schema": {
     "user": {
@@ -8,8 +29,7 @@
         "type": "string"
       },
       "email": {
-        "type": "string",
-        "unique": true
+        "type": "string"
       },
       "firstname": {
         "type": "string"
@@ -38,6 +58,8 @@
     }
   },
   "counters": {
-    "user": {}
+    "user": {
+      "id": 2
+    }
   }
 }
